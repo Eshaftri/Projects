@@ -19,7 +19,7 @@ CREATE TABLE events
   event_type VARCHAR(255),
   event_date VARCHAR(255),
   event_time VARCHAR(255),
-  event_size VARCHAR(255)
+  event_size INT8
 );
 
 CREATE TABLE attendants
