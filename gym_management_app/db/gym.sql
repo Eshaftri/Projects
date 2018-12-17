@@ -6,9 +6,9 @@ DROP TABLE events;
 CREATE TABLE members
 (
   id SERIAL8 primary key,
-  first_name VARCHAR(255) NOT NULL,
+  first_name VARCHAR(255),
   last_name VARCHAR(255),
-  titel VARCHAR(255),
+  title VARCHAR(255),
   address VARCHAR(255),
   dob VARCHAR(255)
 );

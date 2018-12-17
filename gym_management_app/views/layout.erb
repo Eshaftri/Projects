@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CodeClanGym</title>
+  <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+  <link href="https://unpkg.com/ionicons@4.4.6/dist/css/ionicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/styles/buttons.css">
+  <link rel="stylesheet" type="text/css" href="/styles/forms.css">
+  <link rel="stylesheet" type="text/css" href="/styles/structure.css">
+  <link rel="stylesheet" type="text/css" href="/styles/tables.css">
+</head>
+<body>
+  <header>
+
+    <!-- Navigation -->
+
+    <nav>
+      <div class="row">
+        <p class="logo" href="#"><strong>CodeClanGym</strong></p>
+        <ul class="main-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/members">Memebrs</a></li>
+          <li><a href="/events">Classes</a></li>
+          <li><a href="/attendants">Attendants</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- content -->
+
+  <section class="content">
+    <%= yield %>
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+    <div class="row">
+      <ul class="footer-nav">
+        <li><a href="#">About us</a></li>
+        <li><a href="#">iOS App</a></li>
+        <li><a href="#">Android App</a></li>
+      </ul>
+      <ul class="social-links">
+        <li><a href="#"><i class="icon ion-logo-facebook"></i></a></li>
+        <li><a href="#"><i class="icon ion-logo-twitter"></i></a></li>
+        <li><a href="#"><i class="icon ion-logo-chrome"></i></a></li>
+        <li><a href="#"><i class="icon ion-logo-instagram"></i></a></li>
+      </ul>
+    </div>
+    <div class="row">
+      <p>
+        Copyright &copy; 2015 by CodeClanGym. All rights reserved.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

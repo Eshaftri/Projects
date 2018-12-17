@@ -1,0 +1,52 @@
+.btn {
+  border:0px none;
+  border-radius: 10%;
+  padding: 10px 12px;
+  color: papayawhip;
+  cursor:pointer;
+  font-family: 'Lato';
+  text-decoration: none;
+
+}
+
+.btn-edit{
+  background-color: #e17055;
+
+}
+
+.btn-edit:hover {
+  background-color: #f3a683;
+}
+
+.btn-delete{
+  background-color: #d63031;
+  /* padding: 13px; */
+  font-family: 'Lato';
+  font-size: 17px;
+
+}
+
+.btn-delete:hover {
+  background-color: #ff7675;
+
+}
+
+.btn-view{
+  background-color: #3867d6;
+}
+
+.btn-view:hover {
+  background-color: #74b9ff;
+}
+
+.btn-save:hover {
+  background-color:  darkolivegreen;
+}
+
+.btn-save {
+  background-color: #495C27;
+}
+
+.btn--wrapper {
+  margin: 0px 0px 30px 0px;
+}

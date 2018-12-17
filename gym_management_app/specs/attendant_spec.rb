@@ -8,10 +8,8 @@ class AttendantTest < Minitest::Test
     @attenant1 = Attendant.new(2, 3)
   end
 
-  def test_crest_class
+  def test_create_class
     assert_equal(Attendant, @attenant1.class)
   end
-
-
 
 end

@@ -1,0 +1,28 @@
+<div class="edit-form">
+
+  <form method="post" action="/members/<%= @member.id %>">
+  <label for="title">Title</label>
+  <select id="title" name="title">
+    <option value="Mr" <%= "selected" if @member.title == "Mr" %> >Mr</option>
+    <option value="Mrs" <%= "selected" if @member.title == "Mrs" %> >Mrs</option>
+    <option value="Miss" <%= "selected" if @member.title == "Miss" %> >Miss</option>
+    <option value="Ms" <%= "selected" if @member.title == "Ms" %> >Ms</option>
+    <option value="Sr" <%= "selected" if @member.title == "Sr" %> >Sr</option>
+    <option value="Dr" <%= "selected" if @member.title == "Dr" %> >Dr</option>
+  </select>
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="first_name" value="<%=@member.first_name%>">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="last_name" value="<%=@member.last_name%>">
+
+    <label for="address">Address</label>
+    <textarea id="address" name="address" value="<%=@member.address%>" ></textarea>
+
+    <label for="dob">DoB</label>
+    <input type="text" id="dob" name="dob" value="<%=@member.dob%>">
+
+    <input type="submit" value="Edit Member">
+  </form>
+
+  </div>
