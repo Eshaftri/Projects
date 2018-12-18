@@ -1,4 +1,4 @@
-input[type=text], select , textarea{
+input[type=text],select , textarea{
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -24,8 +24,24 @@ input[type=submit]:hover {
   background-color: #ffb142;
 }
 
-.edit-form{
-  width:800px;
+.member-edit-form{
+  width:600px;
+  margin:0 auto;
+  border-radius: 5px;
+  background-color: #aec43b;
+  padding: 20px;
+}
+
+.even-new-form{
+  width:400px;
+  margin:0 auto;
+  border-radius: 5px;
+  background-color: #aec43b;
+  padding: 20px;
+}
+
+.join-class-form{
+  width:400px;
   margin:0 auto;
   border-radius: 5px;
   background-color: #aec43b;

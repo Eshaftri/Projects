@@ -1,0 +1,20 @@
+<div class="member-edit-form">
+
+  <form method="post" action="/events/<%= @event.id %>">
+
+    <label for="event_type">Class</label>
+    <input type="text" id="event_type" name="event_type"  value="<%=@event.event_type%>" required>
+
+    <label for="event_date">Date</label> <br>
+    <input type="date" id="event_date" name="event_date" value="<%=@event.event_date%>" required> <br>
+
+    <label for="event_time">Time</label>    <br>
+    <input type="time" id="event_time" name="event_time" value="<%=@event.event_time%>" required> <br>
+
+    <label for="event_caps">Capacity</label>  <br>
+    <input type="number" id="event_caps" name="event_caps" value="<%=@event.event_caps%>" required><br>
+
+    <input type="submit" value="Edit Class">
+  </form>
+
+  </div>

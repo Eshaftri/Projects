@@ -55,6 +55,13 @@ class Member
     return result
   end
 
+  def book_class(event)
+    return unless event.event_caps > 0
+    return unless customer_can_afford_film?(price)
+    Attendant.new('member_id' => @id, 'event_id' => event.id).save()
+    event.sell_ticket()
+  end
+
   #Helper methods for mapping
   def self.map_items(member_data)
     result = member_data.map { |member| Member.new( member ) }

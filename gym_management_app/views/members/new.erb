@@ -1,4 +1,8 @@
-<div class="edit-form">
+<div class="div-h1">
+  <h1>New Member</h1>
+</div>
+
+<div class="member-edit-form">
 
 <form action="/members" method="post">
   <label for="title">Title</label>
@@ -11,16 +15,16 @@
     <option value="Dr">Dr</option>
   </select>
     <label for="fname">First Name</label>
-    <input type="text" id="fname" name="first_name" placeholder="Your name..">
+    <input type="text" id="fname" name="first_name" placeholder="Your name.." required>
 
     <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="last_name" placeholder="Your last name..">
+    <input type="text" id="lname" name="last_name" placeholder="Your last name.." required>
 
     <label for="address">Address</label>
-    <textarea id="address" name="address" placeholder="Your address.." ></textarea>
+    <textarea id="address" name="address" placeholder="Your address.." required></textarea>
 
-    <label for="dob">DoB</label>
-    <input type="text" id="dob" name="dob" placeholder="Your date of birth..">
+    <label for="dob">DoB</label><br>
+    <input type="date" id="dob" name="dob" required>
 
     <input type="submit" value="Save">
   </form>

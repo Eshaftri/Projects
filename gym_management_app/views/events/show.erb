@@ -1,0 +1,33 @@
+<div class="div-h1">
+  <h1>Class timetable</h1>
+</div>
+
+<table class="event_table" width="100%" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Capacity</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @events.each do |event| %>
+    <tr>
+      <td><%= event.event_type %></td>
+      <td><%= event.event_date %></td>
+      <td><%= event.event_time %></td>
+      <td><%= event.event_caps %></td>
+      <td>
+        <div class="btn-group">
+          <form action="/events/<%= event.id %>/delete" method="POST">
+            <a href="/events/<%=event.id%>/edit"   class="btn btn-edit">Edit</a>
+            <button type="submit" class="btn btn-delete">Delete</button>
+          </form>
+        </div>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

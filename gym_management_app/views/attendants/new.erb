@@ -1,0 +1,33 @@
+ <h1>Join Class</h1>
+
+<div class="join-class-form">
+
+
+  <form action="/attendants" method="post">
+    <label>
+    Select a memebr:
+      <select name="member_id">
+        <% for member in @members %>
+        <option value="<%= member.id %>"><%= member.first_name %></option>
+        <% end %>
+      </select>
+    </label>
+
+    <label>
+      Select a class:
+      <select name="event_id">
+        <% for event in @events %>
+        <option value="<%= event.id %>"><%= event.event_type %></option>
+        <% end %>
+      </select>
+    </label>
+
+    <input class="btn btn--action" type='submit' value="Bite!">
+  </form>
+
+
+
+
+
+
+</div>
