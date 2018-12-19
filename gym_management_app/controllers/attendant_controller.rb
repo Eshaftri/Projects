@@ -12,9 +12,40 @@ get '/attendants' do
   erb(:"attendants/new")
 end
 
+# post '/attendants' do
+#   attendant = Attendant.new(params)
+#   attendant.save
+# redirect to("/members")
+# end
 
 post '/attendants' do
-  attendant = Attendant.new(params)
-  attendant.save
-redirect to("/members")
+  event = Event.find(params['event_id'])
+  member = Member.find(params['member_id'])
+  if !event.is_full?
+    event.reduce_capacity()
+    attendant = Attendant.new(params)
+    attendant.save
+    redirect to("/members")
+  else
+    redirect to("/attenants/error")
+  end
+end
+
+get '/attendants/error' do
+  erb(:'attendants/error')
+end
+
+get '/attendants/:id' do
+  @event = Event.find(params['id'].to_i)
+  erb(:"attendants/show")
+end
+
+post '/attendants/:id/delete' do #delete
+  @attendant = Attendant.find(params['id'])
+
+
+  @attendant.event.cancel_class()
+  # binding.pry
+  Attendant.delete(params[:id])
+  redirect to("/events")
 end

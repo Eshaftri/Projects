@@ -40,10 +40,33 @@ class Attendant
     SqlRunner.run( sql, values )
   end
 
+  def self.find( id )
+    sql = "SELECT * FROM attendants
+    WHERE id = $1"
+    values = [id]
+    attendant = SqlRunner.run( sql, values )
+    result = Attendant.new( attendant.first )
+    return result
+  end
+
+  def event()
+    sql = "SELECT * FROM events
+    WHERE events.id = $1"
+    values = [@event_id]
+    event_data = SqlRunner.run(sql, values)
+    result = Event.map_item(event_data)
+    return result
+  end
+
   #Helper methods for mapping
   def self.map_items(attenant_data)
     result = attenant_data.map { |attenant| Attendant.new( attenant ) }
     return result
+  end
+
+  def self.map_item(attenant_data)
+    result = Attendant.map_items(attenant_data)
+    return result.first
   end
 
 end

@@ -22,6 +22,7 @@
       <td>
         <div class="btn-group">
           <form action="/events/<%= event.id %>/delete" method="POST">
+            <a href="/attendants/<%=event.id%>" class="btn btn-view">View</a>
             <a href="/events/<%=event.id%>/edit"   class="btn btn-edit">Edit</a>
             <button type="submit" class="btn btn-delete">Delete</button>
           </form>

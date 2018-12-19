@@ -11,6 +11,21 @@ class Event
     @event_caps = options['event_caps'].to_i
   end
 
+  def members()
+    sql = "SELECT members.* FROM members  INNER JOIN attendants  ON members.id = attendants.member_id WHERE attendants.event_id = $1;"
+    values = [@id]
+    results = SqlRunner.run(sql, values)
+    return Member.map_items(results)
+  end
+
+  def attendants()
+    sql = "SELECT * FROM attendants
+    WHERE event_id = $1"
+    values = [@id]
+    results = SqlRunner.run( sql, values )
+    return Attendant.map_item(results)
+  end
+
   def save()
     sql = "INSERT INTO events ( event_type, event_date, event_time, event_caps) VALUES ( $1, $2, $3, $4 ) RETURNING *"
     values = [@event_type, @event_date, @event_time, @event_caps]
@@ -56,10 +71,24 @@ class Event
     update()
   end
 
+  def is_full?
+    return @event_caps <= 0
+  end
+
+  def cancel_class()
+    @event_caps += 1
+    update()
+  end
+
   #Helper methods for mapping
   def self.map_items(event_data)
     result = event_data.map { |event| Event.new( event ) }
     return result
+  end
+
+  def self.map_item(event_data)
+    result = Event.map_items(event_data)
+    return result.first
   end
 
 end
