@@ -8,6 +8,11 @@ get '/events' do
   erb (:"events/show")
 end
 
+get '/events/view' do
+  @events = Event.all() #show all
+  erb (:"events/view")
+end
+
 get '/events/new' do
   @event = Event.all
   erb(:"events/new")

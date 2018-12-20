@@ -1,5 +1,5 @@
 <h1>
-  Class timetable
+  Class view
 </h1>
 <main>
   <table>
@@ -35,8 +35,11 @@
         </td>
         <td class='select'>
           <div class="btn-group">
-            <a href="/attendants/<%=event.id%>" class="btn btn-view">View</a>
-
+            <form action="/events/<%= event.id %>/delete" method="POST">
+              <a href="/attendants/<%=event.id%>" class="btn btn-view">View</a>
+              <a href="/events/<%=event.id%>/edit"   class="btn btn-edit">Edit</a>
+              <button type="submit" class="btn btn-delete">Delete</button>
+            </form>
           </div>
         </td>
       </tr>
