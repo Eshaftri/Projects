@@ -27,7 +27,7 @@ post '/attendants' do
     attendant.save
     redirect to("/members")
   else
-    redirect to("/attenants/error")
+    redirect to("/attendants/error")
   end
 end
 

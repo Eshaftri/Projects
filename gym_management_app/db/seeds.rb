@@ -51,7 +51,7 @@ event1 = Event.new({
   "event_type" => "Yoga",
   "event_date" => '2000-12-18',
   "event_time" => "11:00",
-  "event_caps" => 12
+  "event_caps" => 3
 })
 
 event1.save()
@@ -60,7 +60,7 @@ event2 = Event.new({
   "event_type" => "Zumba",
   "event_date" => '1990-11-18',
   "event_time" => "17:10",
-  "event_caps" => 12
+  "event_caps" => 3
 })
 
 event2.save()
@@ -69,7 +69,7 @@ event3= Event.new({
   "event_type" => "Jumping",
   "event_date" => '2010-12-18',
   "event_time" => "09:00",
-  "event_caps" => 12
+  "event_caps" => 3
 })
 
 event3.save()
@@ -78,7 +78,7 @@ event4= Event.new({
   "event_type" => "Boxing",
   "event_date" => '2000-01-19',
   "event_time" => "15:00",
-  "event_caps" => 12
+  "event_caps" => 3
 })
 
 event4.save()
