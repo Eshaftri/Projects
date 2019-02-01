@@ -12,17 +12,11 @@ get '/attendants' do
   erb(:"attendants/new")
 end
 
-# post '/attendants' do
-#   attendant = Attendant.new(params)
-#   attendant.save
-# redirect to("/members")
-# end
-
 post '/attendants' do
   event = Event.find(params['event_id'])
   member = Member.find(params['member_id'])
   if !event.is_full?
-    event.reduce_capacity()
+    event.book_class()
     attendant = Attendant.new(params)
     attendant.save
     redirect to("/members")

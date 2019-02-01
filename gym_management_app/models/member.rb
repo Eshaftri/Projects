@@ -71,12 +71,6 @@ class Member
     return result
   end
 
-  def book_class(attenant)
-    return unless events.event_caps > 0
-    Attendant.new('member_id' => @id, 'event_id' => events.id).save()
-    events.reduce_capacity()
-  end
-
   def format_name
     return "#{@first_name.capitalize} #{@last_name.capitalize}"
   end

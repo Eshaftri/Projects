@@ -66,7 +66,7 @@ class Event
     return result
   end
 
-  def reduce_capacity()
+  def book_class()
     @event_caps -= 1
     update()
   end

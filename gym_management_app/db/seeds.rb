@@ -108,5 +108,3 @@ attendant4= Attendant.new({
 })
 attendant4.save()
 
-binding.pry
-nil
